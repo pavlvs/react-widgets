@@ -1,6 +1,8 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React from 'react'
-import Accordion from './Accordion'
+import Search from './Search'
+
+// import Accordion from './Accordion'
 
 const items = [
     {
@@ -20,7 +22,8 @@ const items = [
 export default () => {
     return (
         <div>
-            <Accordion items={items} />
+            {/* <Accordion items={items} /> */}
+            <Search />
         </div>
     )
 }
