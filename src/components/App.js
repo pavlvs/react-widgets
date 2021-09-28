@@ -1,6 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React, { useState } from 'react'
-import Accordion from './Search'
+import Accordion from './Accordion'
 import Search from './Search'
 import Dropdown from './Dropdown'
 import Translate from './Translate'
@@ -37,12 +37,34 @@ const options = [
     },
 ]
 
+const showAccordion = () => {
+    if (window.location.pathname === '/') {
+        return <Accordion items={items} />
+    }
+}
+const showList = () => {
+    if (window.location.pathname === '/list') {
+        return <Search />
+    }
+}
+const showDropdown = () => {
+    if (window.location.pathname === '/dropdown') {
+        return <Dropdown />
+    }
+}
+const showTranslate = () => {
+    if (window.location.pathname === '/translate') {
+        return <Translate />
+    }
+}
+
 export default () => {
     return (
         <div>
-            {/* <Accordion items={items} /> */}
-            {/* <Search /> */}
-            <Translate />
+            {showAccordion()}
+            {showList()}
+            {showDropdown()}
+            {showTranslate()}
         </div>
     )
 }
