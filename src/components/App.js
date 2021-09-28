@@ -1,6 +1,8 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React from 'react'
+import Accordion from './Search'
 import Search from './Search'
+import Dropdown from './Dropdown'
 
 // import Accordion from './Accordion'
 
@@ -19,11 +21,27 @@ const items = [
     },
 ]
 
+const options = [
+    {
+        label: 'The Color Red',
+        value: 'red',
+    },
+    {
+        label: 'The Color Green',
+        value: 'blue',
+    },
+    {
+        label: 'A Shade of Blue',
+        value: 'blue',
+    },
+]
+
 export default () => {
     return (
         <div>
             {/* <Accordion items={items} /> */}
-            <Search />
+            {/* <Search /> */}
+            <Dropdown options={options} />
         </div>
     )
 }
