@@ -28,7 +28,7 @@ const options = [
     },
     {
         label: 'The Color Green',
-        value: 'blue',
+        value: 'green',
     },
     {
         label: 'A Shade of Blue',
