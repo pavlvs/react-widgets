@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Accordion from './Search'
 import Search from './Search'
 import Dropdown from './Dropdown'
+import Translate from './Translate'
 
 // import Accordion from './Accordion'
 
@@ -37,22 +38,11 @@ const options = [
 ]
 
 export default () => {
-    const [selected, setSelected] = useState(options[0])
-    const [showDropdown, setShowDropdown] = useState(true)
     return (
         <div>
             {/* <Accordion items={items} /> */}
             {/* <Search /> */}
-            <button onClick={() => setShowDropdown(!showDropdown)}>
-                Toggle Dropdown
-            </button>
-            {showDropdown ? (
-                <Dropdown
-                    selected={selected}
-                    onSelectedChange={setSelected}
-                    options={options}
-                />
-            ) : null}
+            <Translate />
         </div>
     )
 }
