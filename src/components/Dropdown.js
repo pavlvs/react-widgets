@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 
-const Dropdown = ({ options, selected, onSelectedChange }) => {
+const Dropdown = ({ label, options, selected, onSelectedChange }) => {
     const [open, setOpen] = useState(false)
     const ref = useRef()
     useEffect(() => {
@@ -35,13 +35,12 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
             </div>
         )
     })
-    console.log(ref.current)
 
     return (
         <div ref={ref} className='ui form'>
             <div className='field'>
                 <label htmlFor='' className='label'>
-                    Select a Color
+                    {label}
                 </label>
                 <div
                     onClick={() => {
